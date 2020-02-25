@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style type="text/css">
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+      max-height: 5px;
+      /*scrollbar-x-position: top;*/
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      /*background: #e0e0e0;*/
+      /*background: none*/
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #c4c2c2;
+      border-radius: 5px;
+      /*scrollbar-x-position: top;*/
+
+      /*background: none*/
+    }
+
+    /* Track on hover */
+    ::-webkit-scrollbar-track:hover {
+      background: #e0e0e0;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #c4c2c2;
+    }
+
+    /* For the Google location auto-completion menu to work inside modal */
+    .pac-container {
+      z-index: 100000 !important;
+    }
+
+    body {
+      overflow-x: hidden;
+      /*height: 75vh;*/
+    }
+  </style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Website</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script src="/js/bundle.js"></script>
+  </body>
+</html>
