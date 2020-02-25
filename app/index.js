@@ -3,10 +3,11 @@ import { render } from "react-dom";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 // import injectTapEventPlugin from 'react-tap-event-plugin';
-import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
+// import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
 
 /* ------------Material UI classes-----------*/
-import { createMuiTheme } from "@material-ui/core/styles";
+// import { createMuiTheme } from "@material-ui/core/styles";
+import { createMuiTheme, makeStyles, ThemeProvider } from "@material-ui/core/styles";
 import { red, orange, green, grey } from "@material-ui/core/colors";
 
 /* ------------Custom inports----------------*/
@@ -78,9 +79,6 @@ const palette = {
     main: "#8dca35",
     dark: "#5a9900"
   },
-  info: {
-    main: "#0062c5 !important"
-  },
   success: {
     main: "#8dca35",
     dark: "#5a9900"
@@ -127,13 +125,13 @@ const muiTheme = createMuiTheme({
 const RenderDom = props => {
   render(
     <Provider store={store}>
-      <MuiThemeProvider theme={muiTheme}>
+      <ThemeProvider theme={muiTheme}>
         <StrictMode>
           <ErrorBoundary>
             <Router>{IndexRoutes}</Router>
           </ErrorBoundary>
         </StrictMode>
-      </MuiThemeProvider>
+      </ThemeProvider>
     </Provider>,
     document.getElementById("root")
   );
